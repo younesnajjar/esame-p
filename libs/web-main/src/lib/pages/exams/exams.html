@@ -1,0 +1,22 @@
+
+@let exams = exams$ | async;
+
+<div class="m-16">
+  <div class="top-container">
+    <div>
+      <h1 class="font-bold">{{ 'global.my-exams' | translate }}</h1>
+      @if (exams && exams.length) {
+        <span class="text-sm font-semibold text-gray-500">{{'global.exams-to-come' | translate : {count: exams.length} }}</span>
+      }
+    </div>
+    <p-button
+      (onClick)="openOrganizerModal()"
+    >{{'global.organize-an-exam' | translate}}</p-button>
+  </div>
+  <div class="exams-container">
+    @for (exam of exams; track exam.id) {
+      <lib-exam [exam]="exam"></lib-exam>
+    }
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@esame/common": ["libs/common/src/index.ts"],
+      "@esame/data-models": ["libs/data-models/src/index.ts"],
+      "@esame/fluxion": ["libs/fluxion/src/index.ts"],
+      "@esame/web-main": ["libs/web-main/src/index.ts"],
+      "@esame/web-ui": ["libs/web-ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

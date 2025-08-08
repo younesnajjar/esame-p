@@ -1,0 +1,24 @@
+{
+  "global": {
+    "waiting-value": "En attente",
+    "my-exams": "Mes examens",
+    "exams-to-come": "{{count}} à venir",
+    "organize-an-exam": "Organiser un examen"
+  },
+  "status": {
+    "in-search": "Recherche d’un lieu",
+    "confirmed": "Confirmé",
+    "canceled": "Annulé",
+    "to-organize": "À organiser"
+  },
+  "add": {
+    "firstname": "Prénom",
+    "lastname": "Nom",
+    "location": "Lieu",
+    "date": "Date",
+    "time": "Heure"
+  },
+  "validation": {
+    "required": "Ce champ est requis"
+  }
+}

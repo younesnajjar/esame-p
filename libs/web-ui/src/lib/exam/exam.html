@@ -1,0 +1,30 @@
+<div class="exam-container">
+  <ng-container
+    [ngTemplateOutlet]="field"
+    [ngTemplateOutletContext]="{icon: 'user', value: exam()?.student?.first_name + ' ' + exam()?.student?.last_name}">
+  </ng-container>
+  <ng-container
+    [ngTemplateOutlet]="field"
+    [ngTemplateOutletContext]="{icon: 'map-marker', value: exam()?.meeting_point}">
+  </ng-container>
+
+  <ng-container
+    [ngTemplateOutlet]="field"
+    [ngTemplateOutletContext]="{icon: 'calendar', value: exam()?.date | date: 'dd MMMM'}">
+  </ng-container>
+
+  <ng-container
+    [ngTemplateOutlet]="field"
+    [ngTemplateOutletContext]="{icon: 'clock', value:  exam()?.date ? (exam()?.date | date: 'HH') + 'h' : ''}">
+  </ng-container>
+  <div>
+   <lib-status [status]="exam()?.status"></lib-status>
+  </div>
+</div>
+
+<ng-template #field let-icon="icon" let-value="value">
+  <div class="exam-field" [ngClass]="{empty: !value}">
+    <span [class]="'pi pi-' + icon"></span>
+    <span class="field-text">{{ value || ('global.waiting-value' | translate) }}</span>
+  </div>
+</ng-template>

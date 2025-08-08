@@ -1,0 +1,11 @@
+.status-container {
+  ::ng-deep .p-tag {
+    @apply items-center rounded-full;
+    .p-tag-icon {
+      @apply font-extrabold;
+    }
+    .p-tag-label {
+      @apply text-sm font-normal;
+    }
+  }
+}

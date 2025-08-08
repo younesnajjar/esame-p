@@ -1,0 +1,6 @@
+.top-container {
+  @apply flex w-full justify-between p-2;
+}
+.exams-container {
+  @apply flex flex-col gap-2;
+}

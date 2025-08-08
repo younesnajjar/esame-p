@@ -1,0 +1,17 @@
+<div class="status-container">
+  @switch (status()) {
+    @case (ExamStatus.IN_SEARCH_OF_PLACE) {
+      <p-tag icon="pi pi-hourglass" severity="secondary" [value]="'status.in-search' | translate" />
+    }
+    @case (ExamStatus.TO_ORGANIZE) {
+      <p-tag icon="pi pi-send" severity="warn" [value]="'status.to-organize' | translate" />
+    }
+    @case (ExamStatus.CONFIRMED) {
+      <p-tag icon="pi pi-check" severity="success" [value]="'status.confirmed' | translate" />
+    }
+    @case (ExamStatus.CANCELLED) {
+      <p-tag icon="pi pi-times" severity="danger" [value]="'status.canceled' | translate" />
+    }
+  }
+</div>
+
