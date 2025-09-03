@@ -8,6 +8,7 @@ import { ExamModel, ExamStatus } from '@esame/data-models';
 import { Select } from 'primeng/select';
 import { InputText } from 'primeng/inputtext';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { AutoFocus } from 'primeng/autofocus';
 
 @Component({
   selector: 'lib-add-exam',
@@ -20,6 +21,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
     Select,
     InputText,
     TranslatePipe,
+    AutoFocus,
   ],
   templateUrl: './add-exam.html',
   styleUrl: './add-exam.scss',
@@ -61,7 +63,7 @@ export class AddExam implements OnInit {
         last_name: ['', Validators.required],
       }),
       meeting_point: [''],
-      date: [null, Validators.required],
+      date: [new Date(), Validators.required],
       status: [ExamStatus.TO_ORGANIZE, Validators.required],
     });
   }

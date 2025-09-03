@@ -3,15 +3,15 @@
   <div formGroupName="student">
     <div>
       <span class="block text-sm font-medium text-[#374151] mb-1">{{ 'add.firstname' | translate }}</span>
-      <input pInputText formControlName="first_name" class="w-full" placeholder="First Name" />
-      @if (this.form.controls['student'].touched && this.form.controls['student'].invalid) {
+      <input [pAutoFocus]="true" pInputText formControlName="first_name" class="w-full" placeholder="First Name" />
+      @if (this.form.controls['student'].get('first_name')?.touched && this.form.controls['student'].get('first_name')?.invalid) {
         <ng-container [ngTemplateOutlet]="required"></ng-container>
       }
     </div>
     <div>
       <span class="block text-sm font-medium text-[#374151] mb-1">{{ 'add.firstname' | translate }}</span>
       <input pInputText formControlName="last_name" class="w-full" placeholder="Last Name" />
-      @if (this.form.controls['student'].touched && this.form.controls['student'].invalid) {
+      @if (this.form.controls['student'].get('last_name')?.touched && this.form.controls['student'].get('last_name')?.invalid) {
         <ng-container [ngTemplateOutlet]="required"></ng-container>
       }
     </div>
